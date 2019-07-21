@@ -6,14 +6,14 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
   context: path.resolve("__dirname", "../"),
   entry: {
-    webssh2: "./client/src/js/index.js"
+    sshtun: "./client/src/js/index.js"
   },
   plugins: [
     new CleanWebpackPlugin(["client/public"], {
       root: path.resolve("__dirname", "../"),
       verbose: true
     }),
-    new CopyWebpackPlugin(["./client/src/client.htm"]),
+    new CopyWebpackPlugin(["./client/src/client.html"]),
     new ExtractTextPlugin("[name].css")
   ],
   output: {

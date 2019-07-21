@@ -2,9 +2,8 @@ var path = require("path");
 var nodeRoot = path.dirname(require.main.filename);
 var publicPath = path.join(nodeRoot, "client", "public");
 var express = require("express");
-var logger = require("morgan");
+
 require("colors");
-// takes a string, makes it boolean (true if the string is true, false otherwise)
 function parseBool(str) {
   return str.toLowerCase() === "true";
 }
