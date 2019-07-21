@@ -29,8 +29,8 @@
     "validator": "^10.9.0"
   },
   "scripts": {
-    "start": "node index.js",
-    "build": "webpack --progress --colors --config scripts/webpack.prod.js",
+    "start": "node app.js",
+    "build": "webpack --progress --colors --config webpack/webpack.prod.js",
     "watch": "nodemon app.js"
   },
   "devDependencies": {
