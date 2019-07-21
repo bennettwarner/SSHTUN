@@ -29,7 +29,6 @@
   },
   "scripts": {
     "start": "node app.js",
-    "build": "webpack --progress --colors --config webpack/webpack.prod.js",
     "watch": "nodemon app.js"
   },
   "devDependencies": {

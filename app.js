@@ -1,6 +1,6 @@
 var path = require("path");
 var nodeRoot = path.dirname(require.main.filename);
-var publicPath = path.join(nodeRoot, "client", "public");
+var publicPath = path.join(nodeRoot, "public");
 var express = require("express");
 
 require("colors");
@@ -88,7 +88,7 @@ app.use(express.static(publicPath));
 app.get("/ssh/host/:host?", function(req, res, next) {
   if (req.query.username) req.session.username = req.query.username;
   if (req.query.password) req.session.userpassword = req.query.password;
-  res.sendFile(path.join(path.join(publicPath, "client.htm")));
+  res.sendFile(path.join(path.join(publicPath, "client.html")));
   // capture, assign, and validated variables
   req.session.ssh = {
     host:
