@@ -1,0 +1,49 @@
+{
+  "name": "sshtun",
+  "version": "0.2.9",
+  "ignore": [
+    ".gitignore"
+  ],
+  "homepage": "",
+  "keywords": [],
+  "license": "ISC",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "contributors": [
+    ""
+  ],
+  "engines": {
+    "node": ">= 6"
+  },
+  "dependencies": {
+    "colors": "^1.3.2",
+    "compression": "^1.7.3",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "morgan": "^1.9.1",
+    "socket.io": "^2.1.1",
+    "ssh2": "^0.6.1",
+    "validator": "^10.9.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "build": "webpack --progress --colors --config scripts/webpack.prod.js",
+    "watch": "nodemon app.js"
+  },
+  "devDependencies": {
+    "colors": "^1.3.2",
+    "compression": "^1.7.3",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "morgan": "^1.9.1",
+    "socket.io": "^2.1.1",
+    "ssh2": "^0.6.1",
+    "validator": "^10.9.0"
+  },
+  "main": "app.js",
+  "author": "",
+  "description": ""
+}
