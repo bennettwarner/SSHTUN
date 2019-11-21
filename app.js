@@ -2,6 +2,16 @@ var path = require("path");
 var nodeRoot = path.dirname(require.main.filename);
 var publicPath = path.join(nodeRoot, "public");
 var express = require("express");
+var chalk = require("chalk");
+
+var http_port = 2222;
+
+if (
+  (process.argv[2] == "-p" || process.argv[2] == "--port") &&
+  !isNaN(process.argv[3])
+) {
+  http_port = parseInt(process.argv[3]);
+}
 
 require("colors");
 function parseBool(str) {
@@ -178,5 +188,11 @@ app.use(function(err, req, res, next) {
 
 // bring up socket
 io.on("connection", socket);
-
-server.listen({ host: "0.0.0.0", port: 2222 });
+server.listen({ host: "0.0.0.0", port: http_port }, () => {
+  console.log(
+    "%s App is running at http://localhost:%d",
+    chalk.green("✓"),
+    http_port
+  );
+  console.log("  Press CTRL-C to stop\n");
+});
